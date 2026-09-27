@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Radio buttons</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Radio buttons</h1>
+      </header>
+
+      <main>
+        <div class="radio-container">
+          <div class="radio-buttons">
+            <div class="radio-button-text">Click a radio button</div>
+
+            <div class="radio-input">
+              <label for="radio1" class="radioBtn-container">
+                <input
+                  type="radio"
+                  id="radio1"
+                  name="radioBtn"
+                  checked="checked"
+                />
+                <span class="checkmark"></span>
+              </label>
+              <div id="status1"></div>
+            </div>
+
+            <div class="radio-input">
+              <label for="radio2" class="radioBtn-container">
+                <input type="radio" id="radio2" name="radioBtn" />
+                <span class="checkmark"></span>
+              </label>
+              <div id="status2"></div>
+            </div>
+
+            <div class="radio-input">
+              <label for="radio3" class="radioBtn-container">
+                <input type="radio" id="radio3" name="radioBtn" />
+                <span class="checkmark"></span>
+              </label>
+              <div id="status3"></div>
+            </div>
+
+            <!-- DISPLAY RESULT -->
+            <div id="checkboxText"></div>
+            <div id="checkboxState"></div>
+
+            <div id="resetBtn" class="resetBtn">reset</div>
+          </div>
+        </div>
+      </main>
+
+      <!-- COPYRIGHT NOTICE -->
+      <footer>
+        <div id="copy" class="copy"></div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --font1: "Roboto", sans-serif;
+  --bgColor: linear-gradient(to right, #8ebea3 0%, #c7dbcb 100%);
+  --boxShadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --letterSpacing: 0.7px;
+  --color1: #101010;
+  --color2: #303030;
+  --color3: #e0e0e0;
+  --color4: #46a882;
+  --color5: #8ebea3;
+  --color6: #606060;
+  --color7: #b9d6c0;
+  --copyColor1: #404040;
+  --copyColor2: #666666;
+  --copyColor3: #808080;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font1);
+  background: var(--bgColor);
+}
+
+.container {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  place-content: center;
+}
+
+h1 {
+  color: var(--color1);
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  margin: 30px 0;
+  letter-spacing: var(--letterSpacing);
+}
+
+/* RADIO BUTTON CHECK */
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
+  max-width: 450px;
+  background-color: var(--color3);
+  border-radius: 8px;
+}
+
+.radio-buttons {
+  min-width: 220px;
+  padding: 20px;
+}
+
+.radio-button-text {
+  text-align: left;
+  letter-spacing: var(--letterSpacing);
+  padding-bottom: 10px;
+}
+
+.radio-input {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+#status1,
+#status2,
+#status3 {
+  color: var(--color2);
+  font-size: 14px;
+  letter-spacing: var(--letterSpacing);
+  text-align: left;
+  overflow: auto;
+}
+
+#checkboxText {
+  color: var(--color1);
+  font-size: 14px;
+  text-align: left;
+  letter-spacing: var(--letterSpacing);
+  text-decoration: underline dotted;
+  text-decoration-color: var(--color2);
+  text-underline-offset: 8px;
+  margin-top: 30px;
+}
+
+#checkboxState {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
+  font-size: 14px;
+  color: var(--color1);
+  letter-spacing: var(--letterSpacing);
+  line-height: 1.8;
+  margin-top: 30px;
+}
+
+.radioBtn-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radioBtn-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Customize the label (the radioBtn-container) */
+.radioBtn-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radioBtn-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  height: 26px;
+  width: 26px;
+  background-color: var(--color3);
+  border-radius: 50%;
+  outline: 1px solid var(--color6);
+  outline-offset: -0.4px;
+}
+
+/* On mouse-over, add a background color */
+.radioBtn-container:hover input ~ .checkmark {
+  background-color: var(--color7);
+  box-shadow: var(--boxShadow);
+}
+
+/* When the radio button is checked, add a background color  */
+.radioBtn-container input:checked ~ .checkmark {
+  background-color: var(--color3);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radioBtn-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radioBtn-container .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color4);
+}
+
+.defaultText {
+  display: inline;
+  color: var(--color6);
+  font-size: 12px;
+}
+
+.resetBtn {
+  font-size: 14px;
+  text-align: left;
+  color: var(--color1);
+  padding: 4px 12px;
+  background-color: var(--color5);
+  border: 1px solid var(--color6);
+  letter-spacing: var(--letterSpacing);
+  width: fit-content;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.resetBtn:hover {
+  background-color: var(--color4);
+  color: var(--color3);
+  box-shadow: var(--boxShadow);
+}
+
+.copy {
+  color: var(--copyColor1);
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: var(--letterSpacing);
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.copy a {
+  color: var(--copyColor1);
+  text-decoration: underline dotted;
+  text-decoration-color: var(--copyColor2);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 6px;
+}
+
+.copy a:hover {
+  color: var(--copyColor1);
+  text-decoration-color: var(--copyColor3);
+}
+
+@media only screen and (max-width: 390px) {
+  .copy {
+    padding: 8px 0;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .copy a {
+    text-underline-offset: 4px;
+  }
+
+  .copy2 {
+    display: block;
+  }
+
+  .defaultText {
+    display: block;
+  }
+}
